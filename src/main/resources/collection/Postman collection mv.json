@@ -5,11 +5,7 @@
   },
   "item": [
     {
-      "name": "bruno",
-      "event": []
-    },
-    {
-      "name": "Producer",
+      "name": "Ativa Schedule",
       "event": [],
       "request": {
         "method": "POST",
@@ -17,19 +13,23 @@
         "auth": null,
         "description": "",
         "url": {
-          "raw": "http://localhost:8080/logs/create",
+          "raw": "http://localhost:8080/logs/start",
           "protocol": "http",
           "host": [
             "localhost:8080"
           ],
           "path": [
             "logs",
-            "create"
+            "start"
           ],
           "query": [],
           "variable": []
         }
       }
+    },
+    {
+      "name": "bruno",
+      "event": []
     },
     {
       "name": "Consumer",
@@ -55,22 +55,22 @@
       }
     },
     {
-      "name": "Lista arquivos no S3",
+      "name": "Desativa Schedule",
       "event": [],
       "request": {
-        "method": "GET",
+        "method": "POST",
         "header": [],
         "auth": null,
         "description": "",
         "url": {
-          "raw": "http://localhost:8080/logs/logs",
+          "raw": "http://localhost:8080/logs/stop",
           "protocol": "http",
           "host": [
             "localhost:8080"
           ],
           "path": [
             "logs",
-            "logs"
+            "stop"
           ],
           "query": [],
           "variable": []
@@ -102,7 +102,7 @@
       }
     },
     {
-      "name": "Ativa Schedule",
+      "name": "Lista arquivos no S3",
       "event": [],
       "request": {
         "method": "GET",
@@ -110,15 +110,14 @@
         "auth": null,
         "description": "",
         "url": {
-          "raw": "http://localhost:8080/logs/logs/log_1730836047075.json",
+          "raw": "http://localhost:8080/logs/logs",
           "protocol": "http",
           "host": [
             "localhost:8080"
           ],
           "path": [
             "logs",
-            "logs",
-            "log_1730836047075.json"
+            "logs"
           ],
           "query": [],
           "variable": []
@@ -126,7 +125,7 @@
       }
     },
     {
-      "name": "Desativa Schedule",
+      "name": "Producer",
       "event": [],
       "request": {
         "method": "POST",
@@ -134,14 +133,14 @@
         "auth": null,
         "description": "",
         "url": {
-          "raw": "http://localhost:8080/logs/stop",
+          "raw": "http://localhost:8080/logs/create",
           "protocol": "http",
           "host": [
             "localhost:8080"
           ],
           "path": [
             "logs",
-            "stop"
+            "create"
           ],
           "query": [],
           "variable": []
